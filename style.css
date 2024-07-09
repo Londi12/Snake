@@ -5,16 +5,26 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-}
-
-#game-board {
-    background-color: #333;
-    border: 5px solid #555;
-    padding: 20px;
-}
-
-#gameCanvas {
-    background-color: #222;
-    display: block;
-    margin: 0 auto;
-}
+  }
+  
+  #gameArea {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .snakePart, #food {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  
+  .snakePart {
+    background-color: green;
+  }
+  
+  #food {
+    background-color: red;
+  }
+  
