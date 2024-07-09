@@ -18,6 +18,7 @@
             background-color: #333;
             border: 5px solid #555;
             padding: 20px;
+            text-align: center; /* Center text inside game-board */
         }
 
         #gameCanvas {
@@ -29,6 +30,8 @@
 </head>
 <body>
     <div id="game-board">
+        <p id="instructions">Use arrow keys to control the snake.</p>
+        <p id="points">Points: 0</p>
         <canvas id="gameCanvas"></canvas>
     </div>
 

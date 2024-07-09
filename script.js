@@ -14,6 +14,25 @@ let snake = [
 let dx = snakeSize;
 let dy = 0;
 
+// Variables for game state
+let points = 0;
+
+// Function to update points display
+function updatePoints() {
+    const pointsElement = document.getElementById('points');
+    pointsElement.textContent = `Points: ${points}`;
+}
+
+// Function to display instructions
+function displayInstructions() {
+    const instructionsElement = document.getElementById('instructions');
+    instructionsElement.textContent = 'Use arrow keys to control the snake.';
+}
+
+// Call functions to display initial instructions and points
+displayInstructions();
+updatePoints();
+
 // Main game loop using requestAnimationFrame
 function main() {
     updateGame();
@@ -89,3 +108,4 @@ function changeDirection(event) {
 
 // Initialize the game
 main();
+
