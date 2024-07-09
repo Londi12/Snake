@@ -14,12 +14,24 @@ let snake = [
 let dx = snakeSize;
 let dy = 0;
 
-// Main game loop
+// Main game loop using requestAnimationFrame
 function main() {
-    clearCanvas();
+    updateGame();
+    drawGame();
+    requestAnimationFrame(main);
+}
+
+// Update game state
+function updateGame() {
     moveSnake();
+    // Add other game logic here (e.g., collision detection)
+}
+
+// Draw game elements
+function drawGame() {
+    clearCanvas();
     drawSnake();
-    setTimeout(main, 100); // Adjust the speed of the game here (lower is faster)
+    // Add other drawing functions (e.g., drawFood())
 }
 
 // Clear the canvas
@@ -75,5 +87,5 @@ function changeDirection(event) {
     }
 }
 
-// Start the game
+// Initialize the game
 main();
